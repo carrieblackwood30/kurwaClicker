@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    --primary-color: #d4a373 ;
+    --seconary-color: #fefae0;
+}
+
+body{
+    background-color: var(--seconary-color);
+    color: var(--primary-color);
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.screen{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.screen.visible{
+    display: flex;
+}
+
+.btn{
+    border: 0;
+    background-color: var(--primary-color);
+    color: var(--seconary-color);
+    padding: 0 2rem;
+    cursor: pointer;
+    font-size: 32px;
+    transition: .3s ease-in-out all;
+}
+
+.btn:hover{
+    opacity: 0.9;
+    transform: scale(1.1);
+    box-shadow: 5px 2px 2px var(--primary-color);
+}
+
+.bober-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+
+.bober-list li{
+    margin: 10px;
+}
+
+.choose-bober-btn{
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    transition: .3s ease-in-out all;
+}
+
+.choose-bober-btn:hover{
+    background-color: var(--primary-color);
+    color: var(--seconary-color);
+    transform: scale(1.1);
+}
+
+.choose-bober-btn img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.time, .score{
+    position: absolute;
+    top: 20px;
+}
+
+.time{
+    left: 20px;
+}
+
+.score{
+    right: 20px;
+}
+
+.bober{
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+}
+
+.message {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 20px;
+  z-index: 2;
+  text-align: center;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  transition: transform 0.4s ease-in;
+}
+
+.message.visible {
+  transform: translate(-50%, 150%);
+  opacity: 1;
+}

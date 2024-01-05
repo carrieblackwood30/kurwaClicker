@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="screen visible">
+        <h2>bober clicker</h2>
+        <button class="btn" id="start-btn">start</button>
+    </div>
+
+    <div class="screen">
+        <h2>choose a bober</h2>
+        <ul class="bober-list">
+            <li>
+                <button class="choose-bober-btn">
+                    <p>bober 1</p>
+                    <img src="img/1672506974_flomaster-club-p-bober-detskii-risunok-vkontakte-58.png" alt="bober1">
+                </button>
+            </li>
+
+            <li>
+                <button class="choose-bober-btn">
+                    <p>bober 2</p>
+                    <img src="img/1673525478_gas-kvas-com-p-bober-detskii-risunok-1.png" alt="bober2">
+                </button>
+            </li>
+
+            <li>
+                <button class="choose-bober-btn">
+                    <p>bober 3</p>
+                    <img src="img/1685576806_gagaru-club-p-bober-risunok-3.png" alt="bober3">
+                </button>
+            </li>
+
+        </ul>
+    </div>
+
+
+    <div class="screen game-container" id="game-container">
+        <h3 id="time" class="time">time: 0</h3>
+        <h3 id="score" class="score">count: 0</h3>
+        <h5 id="message" class="message">
+        Enough kurwa! <br />z§
+        it's too many kurwa today!
+      </h5>
+    </div>
+
+
+    <audio id="kurwa" src="audio/o-kurwa_1.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
