@@ -4,7 +4,7 @@ const startButton = document.getElementById('start-btn');
 const gameNode = document.getElementById('game-container');
 const timeEl = document.getElementById('time');
 const scoreEl = document.getElementById('score');
-const message = document.getElementById("message");
+
 
 let seconds = 0;
 let score = 0;
@@ -23,7 +23,7 @@ chooseBoberBtn.forEach((btn) => {
         selectBober = { src };
 
         screens[1].classList.remove('visible');
-  screens[2].classList.add('visible');
+        screens[2].classList.add('visible');
 
         startGame();
     });
@@ -58,10 +58,10 @@ function createBober() {
 
 function getRandomLocation(){
     const width = window.innerWidth
- const height = window.innerHeight
+    const height = window.innerHeight
 
- const x = Math.random() * (width - 200) + 100
- const y = Math.random() * (height - 200) + 100
+    const x = Math.random() * (width - 200) + 100
+    const y = Math.random() * (height - 200) + 100
 
  return { x, y }
 }
