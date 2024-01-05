@@ -4,6 +4,7 @@ const startButton = document.getElementById('start-btn');
 const gameNode = document.getElementById('game-container');
 const timeEl = document.getElementById('time');
 const scoreEl = document.getElementById('score');
+const bober2 = document.querySelector('.bober2')
 
 
 let seconds = 0;
@@ -52,6 +53,7 @@ function createBober() {
     bober.style.transform = `rotate(${Math.random() * 360}deg)`;
 
     bober.addEventListener('click', catchBober)
+    bober2.addEventListener('click', catchBober2)
 
     gameNode.appendChild(bober);
 }
@@ -72,6 +74,12 @@ function playKurwaSound(){
     audio.play();
 }
 
+function playKurwaSoundSecond(){
+    const audio = document.getElementById('kurwa2');
+
+    audio.play();
+}
+
 function catchBober() {
     playKurwaSound();
     increaseScore();
@@ -81,8 +89,17 @@ function catchBober() {
     addBober();
 }
 
+function catchBober2() {
+    playKurwaSoundSecond();
+    increaseScore();
+
+    this.remove();
+
+    addBober();
+}
+
 function addBober() {
-    setTimeout(createBober, 1500)
+    setTimeout(createBober, 100)
 }
 
 function increaseScore() {
